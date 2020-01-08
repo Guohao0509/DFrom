@@ -1,0 +1,86 @@
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  height: 100%;
+}
+
+#app{
+  height: 100%;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+// 修改ui框架的部分样式，主要是一些动态生成的组件的样式，没法在其父组件style 为 scoped 时修改
+.my-popper {
+    padding: 20px 0 0 0 !important;
+    background-color: rgb(250, 250, 250);
+}
+.el-button--tiny {
+    padding: 4px 7px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+button:hover {
+    outline: none;
+}
+button:focus {
+    outline: none;
+}
+
+
+pre {
+  display: block;
+  background: rgb(245, 245, 245);
+  padding: 14px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  overflow-x: auto;
+  color: #00fff2
+}
+code {
+  font-family: Arial, Consolas, "Microsoft YaHei", 'Courier New', Courier, monospace;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.my-el-loading {
+  font-size: 30px;
+  width: 80px;
+  height: 100px;
+  border-radius: 10px;
+  line-height: 100px;
+  margin: 300px auto 0;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.el-loading-spinner {
+  top: 25px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.el-dialog {
+  .el-dialog__body {
+    padding: 0px 20px;
+    font-size: 12px;
+  }
+  .el-dialog__header {
+    border-bottom: 1px solid #eeeeee;
+  }
+}

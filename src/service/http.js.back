@@ -1,0 +1,38 @@
+import axios from 'axios';
+import qs from 'qs';
+var http = {};
+var baseUrl = 'http://localhost:8080/';
+http.install = function (Vue, options) {
+  Vue.prototype.$http = {
+    // get方法
+    get(url, params, success, error) {
+      var loading = Vue.prototype.$loading({
+        customClass: 'my-el-loading',
+        spinner: 'el-icon-loading'
+      });
+      axios.get(baseUrl + url, {
+          params: params
+        })
+        .then(function (response) {
+          loading.close();
+          success && success(response.data.data);
+        })
+        .catch(function (err) {
+          loading.close();
+          error && error(err);
+        });
+    },
+    // set方法
+    post(url, params, success, error) {
+      axios.post(baseUrl + url, qs.stringify(params))
+        .then(function (response) {
+          success && success(response.data.data);
+        })
+        .catch(function (err) {
+          error && error(err);
+        });
+    }
+  }
+}
+
+export default http;
