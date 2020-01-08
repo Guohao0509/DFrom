@@ -26,6 +26,7 @@
         this.datacollection = {
           labels: [this.getRandomInt(), this.getRandomInt()],
           datasets: [
+
             {
               label: 'Data One',
               backgroundColor: '#f87979',
